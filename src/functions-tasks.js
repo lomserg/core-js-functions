@@ -57,8 +57,9 @@ function getFunctionBody(func) {
  *  ]) => [0, 1, 2]
  *
  */
-function getArgumentsCount(/* funcs */) {
-  throw new Error('Not implemented');
+function getArgumentsCount(funcs) {
+  // Map over the input array and return an array of argument counts
+  return funcs.map((func) => func.length);
 }
 
 /**
@@ -77,8 +78,11 @@ function getArgumentsCount(/* funcs */) {
  *   power05(16) => 4
  *
  */
-function getPowerFunction(/* exponent */) {
-  throw new Error('Not implemented');
+function getPowerFunction(exponent) {
+  // Return a named function that raises its argument to the power of the specified exponent
+  return function power(x) {
+    return x ** exponent;
+  };
 }
 
 /**
